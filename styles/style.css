@@ -96,7 +96,7 @@
   align-items: center;
 
   margin: 100px 0;
-  padding: 136px 120px 25px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px 0;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--accent-color, #000);
   font-family: var(--PressStart2P, "PressStart2P-Regular");
@@ -193,17 +193,18 @@
   position: relative;
   overflow: hidden;
   max-width: 696px;
-  height: 696px;
   width: 100%;
-}
-
-.card__main:has(.image_invert), .card__main:has(.image_blur), .card__main:has(.image_invert-sepia) {
+  aspect-ratio: 1 / 1;
   border: 2px solid var(--accent-color, #000);
 }
 
 .card__image {
+  display: block;
   width: 100%;
   height: 100%;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .image_brightness {
@@ -241,7 +242,7 @@
   font-family: var(--PressStart2P);
   text-shadow: 0 0 1px var(--background-color, #fff);
   opacity: 0.5;
-  z-index: 1;
+  z-index: 2;
 }
 
 @supports (
@@ -391,7 +392,7 @@
 
 .button__text {
   font-family: var(--PressStart2P, "PressStart2P-Regular");
-  color: var(--background-color, #fff);
+  color: var(--color-button, #fff);
   line-height: 0.9;
   position: relative;
   z-index: 2;
@@ -431,8 +432,8 @@
 }
 
 .button__icon-floppy {
-  color: var(--background-color, #fff);
-  margin-right: 8px;
+  color: var(--color-button, #fff);
+  margin-inline-end: 8px;
   position: relative;
   z-index: 2;
   mix-blend-mode: difference;
@@ -442,10 +443,12 @@
   width: calc(100vw * (352 / 1440));
   min-width: 341px;
   padding: 30px;
+  background-color: var(--background-color, #fff);
+  color: var(--accent-color, #000);
 }
 
 .dialog::backdrop {
-  background-color: var(--accent-color, #000);
+  background-color: #000;
   opacity: 0.75;
 }
 
@@ -476,10 +479,27 @@
 
 .close-button_text {
   font-family: var(--PressStart2P, "PressStart2P-Regular");
-  color: var(--background-color, #fff);
+  color: var(--color-button, #fff);
   line-height: 0.9;
   mix-blend-mode: difference;
   position: relative;
   z-index: 2;
   mix-blend-mode: difference;
+}
+
+@media (width <= 450px) {
+  .button__save {
+    flex-direction: column;
+  }
+
+  .button__icon-floppy {
+    margin-block-end: 8px;
+    margin-inline-end: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog {
+    padding: 30px 42px;
+  }
 }

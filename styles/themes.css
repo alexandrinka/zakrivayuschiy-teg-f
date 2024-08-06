@@ -13,6 +13,8 @@
 
   --background-color: #fff;
   --accent-color: #000;
+  --red-color: #FF0000;
+  --color-button: #fff;
 
   --gradient-color-grid: #d3d3d3;
   --gradient-color-from: #e7e7e7;
@@ -27,6 +29,8 @@
 
   --background-color: #000;
   --accent-color: #00cc14;
+  --red-color: #FF0000;
+  --color-button: #00cc14;
 
   --gradient-color-grid: #000;
   --gradient-color-from: #007f0c;
@@ -42,6 +46,8 @@
   
     --background-color: #000;
     --accent-color: #00cc14;
+    --red-color: #FF0000;
+    --color-button: #00cc14;
 
     --gradient-color-grid: #000;
     --gradient-color-from: #007f0c;
