@@ -484,7 +484,6 @@
   mix-blend-mode: difference;
   position: relative;
   z-index: 2;
-  mix-blend-mode: difference;
 }
 
 @media (width <= 450px) {
