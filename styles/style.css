@@ -191,11 +191,47 @@
 
 .card__main {
   position: relative;
+  overflow: hidden;
+  max-width: 696px;
+  height: 696px;
+  width: 100%;
+}
+
+.card__main:has(.image_invert), .card__main:has(.image_blur), .card__main:has(.image_invert-sepia) {
+  border: 2px solid var(--accent-color, #000);
 }
 
 .card__image {
-  max-width: 696px;
   width: 100%;
+  height: 100%;
+}
+
+.image_brightness {
+  filter: grayscale(0.7);
+}
+
+.image_saturate {
+  filter: saturate(400%);
+}
+
+.image_saturate-sepia {
+  filter: saturate(400%) sepia(40%);
+}
+
+.image_invert {
+  filter: invert(0.8);
+}
+
+.image_sepia {
+  filter: sepia(90%);
+}
+
+.image_blur {
+  filter: blur(0.9rem);
+}
+
+.image_invert-sepia {
+  filter: invert(0.8) sepia(40%);
 }
 
 .card__label {
@@ -205,6 +241,7 @@
   font-family: var(--PressStart2P);
   text-shadow: 0 0 1px var(--background-color, #fff);
   opacity: 0.5;
+  z-index: 1;
 }
 
 @supports (
@@ -389,19 +426,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 103px auto;
   padding: 15px 21px 15px 19px;
 }
 
 .button__icon-floppy {
   color: var(--background-color, #fff);
   margin-right: 8px;
+  position: relative;
+  z-index: 2;
   mix-blend-mode: difference;
 }
 
 .dialog {
-  max-width: 353px;
-  width: 100%;
+  width: calc(100vw * (352 / 1440));
+  min-width: 341px;
   padding: 30px;
 }
 
