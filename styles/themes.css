@@ -13,7 +13,7 @@
 
   --background-color: #fff;
   --accent-color: #000;
-  --red-color: #FF0000;
+  --red-color: #ff0000;
   --color-button: #fff;
 
   --gradient-color-grid: #d3d3d3;
@@ -25,11 +25,11 @@
   --Inter: "Inter-Variable";
   --PressStart2P: "PressStart2P-Regular";
   --font-weight-text: 400;
-  --font-weight-title: 700;
+  --font-weight-title: 785;
 
   --background-color: #000;
   --accent-color: #00cc14;
-  --red-color: #FF0000;
+  --red-color: #ff0000;
   --color-button: #00cc14;
 
   --gradient-color-grid: #000;
@@ -42,11 +42,11 @@
     --Inter: "Inter-Variable";
     --PressStart2P: "PressStart2P-Regular";
     --font-weight-text: 400;
-    --font-weight-title: 700;
-  
+    --font-weight-title: 785;
+
     --background-color: #000;
     --accent-color: #00cc14;
-    --red-color: #FF0000;
+    --red-color: #ff0000;
     --color-button: #00cc14;
 
     --gradient-color-grid: #000;

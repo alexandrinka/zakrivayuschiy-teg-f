@@ -14,42 +14,6 @@
 
 */
 
-@keyframes arrow {
-  0% {
-    left: -16px;
-  }
-  100% {
-    left: -12px;
-  }
-}
-
-@keyframes increase_heart {
-  0% {
-    transform-origin: center center;
-    transform: scale(1);
-  }
-  50% {
-    transform-origin: center center;
-    transform: scale(1.5);
-  }
-  100% {
-    transform-origin: center center;
-    transform: scale(1);
-  }
-}
-
-@keyframes show_sparks {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -59,7 +23,7 @@
 
   margin: 0 auto;
 
-  font-family: var(--Inter), sans-serif;
+  font-family: var(--Inter, "Inter-Variable"), Arial, sans-serif;
   font-size: 14px;
   font-variation-settings: "wght" var(--font-weight-text);
 
@@ -99,7 +63,7 @@
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px 0;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--PressStart2P, "PressStart2P-Regular");
+  font-family: var(--PressStart2P, "PressStart2P-Regular"), Arial, sans-serif;
 }
 
 .header__title {
@@ -118,7 +82,7 @@
 }
 
 .theme-menu__item:not(:last-of-type) {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .theme-menu__button {
@@ -239,7 +203,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--PressStart2P);
+  font-family: var(--PressStart2P), Arial, sans-serif;
   text-shadow: 0 0 1px var(--background-color, #fff);
   opacity: 0.5;
   z-index: 2;
@@ -261,19 +225,19 @@
 }
 
 .card__footer {
-  border-width: 0 2px 2px 2px;
-  border-style: solid;
-  border-color: var(--accent-color, #000);
+  border-right: 2px solid var(--accent-color, #000);
+  border-bottom: 2px solid var(--accent-color, #000);
+  border-left: 2px solid var(--accent-color, #000);
   padding: 25px;
-  margin-top: -3px;
 }
 
 .card__text {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .card__text-item {
   font-size: 18px;
+  line-height: 1.16;
 }
 
 .card__text-item:not(:last-child) {
@@ -288,7 +252,6 @@
 .card__icon-button {
   border: none;
   background-color: transparent;
-  margin-right: 12px;
   transition: outline ease 0.3s;
   cursor: pointer;
 }
@@ -377,7 +340,7 @@
 }
 
 .card__like-button {
-  padding: 12px 37px;
+  padding: 0 34px;
 }
 
 .button {
@@ -391,7 +354,7 @@
 }
 
 .button__text {
-  font-family: var(--PressStart2P, "PressStart2P-Regular");
+  font-family: var(--PressStart2P, "PressStart2P-Regular"), Arial, sans-serif;
   color: var(--color-button, #fff);
   line-height: 0.9;
   position: relative;
@@ -463,7 +426,7 @@
 }
 
 .dialog__title {
-  font-family: var(--PressStart2P, "PressStart2P-Regular");
+  font-family: var(--PressStart2P, "PressStart2P-Regular"), Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -478,7 +441,7 @@
 }
 
 .close-button_text {
-  font-family: var(--PressStart2P, "PressStart2P-Regular");
+  font-family: var(--PressStart2P, "PressStart2P-Regular"), Arial, sans-serif;
   color: var(--color-button, #fff);
   line-height: 0.9;
   mix-blend-mode: difference;
